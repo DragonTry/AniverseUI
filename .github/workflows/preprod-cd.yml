@@ -13,10 +13,12 @@ jobs:
       # Tell the build which commit triggered the workflow
       LAST_COMMIT_SHA: ${{ github.sha }}
       # Base api url
-      # API_URL: ${{ secrets.PREPROD_API_URL }}
+      API_URL: ${{ secrets.PREPROD_API_URL }}
 
     steps:
       - uses: actions/checkout@v2
+
+      run: echo "$NUXT_ROUTER_BASE"
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
