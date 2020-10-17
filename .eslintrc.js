@@ -32,6 +32,7 @@ module.exports = {
     'object-shorthand': 'off',
     'quote-props': ['error', 'consistent'],
     'quotes': 'off',
+    'require-await': 'off',
 
     /*
      * vue rules
