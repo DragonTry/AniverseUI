@@ -9,16 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # For GH-Pages site that starts with the repo name (https://<user>.github.io/<reponame>)
-      # NUXT_ROUTER_BASE: '/AniverseUI-PreProd-Host/' # ${{ secrets.PREPROD_ROUTER_BASE }} # (Like: '/AniverseUI-PreProd-Host/')
+      NUXT_ROUTER_BASE: ${{ secrets.PREPROD_ROUTER_BASE }} # (Like: '/AniverseUI-PreProd-Host/')
       # Tell the build which commit triggered the workflow
       LAST_COMMIT_SHA: ${{ github.sha }}
       # Base api url
-      API_URL: ${{ secrets.PREPROD_API_URL }}
+      ANIVERSE_API_URL: ${{ secrets.PREPROD_ANIVERSE_API_URL }}
 
     steps:
       - uses: actions/checkout@v2
-
-      - run: echo "$NUXT_ROUTER_BASE"
 
       - name: Setup Node
         uses: actions/setup-node@v2.1.2

@@ -62,9 +62,7 @@ export default {
   router: {
     // If available, add the name of the repo to the router.base
     // See https://nuxtjs.org/faq/github-pages
-    // base: process.env.NUXT_ROUTER_BASE || ''
-    base: ''
-
+    base: process.env.NUXT_ROUTER_BASE || ''
   },
 
   // Value of this object is accessible from both client and server using $config
