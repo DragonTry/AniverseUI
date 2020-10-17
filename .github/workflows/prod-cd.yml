@@ -13,7 +13,7 @@ jobs:
       # Tell the build which commit triggered the workflow
       LAST_COMMIT_SHA: ${{ github.sha }}
       # Base api url
-      API_URL: ${{ secrets.PROD_API_URL }}
+      ANIVERSE_API_URL: ${{ secrets.PROD_ANIVERSE_API_URL }}
 
     steps:
       - uses: actions/checkout@v2
